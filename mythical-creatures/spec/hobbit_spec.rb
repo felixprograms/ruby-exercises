@@ -1,4 +1,4 @@
-require './spec/spec_helper'
+require './spec/spec-helper'
 require './lib/hobbit'
 
 RSpec.describe Hobbit do
@@ -12,15 +12,15 @@ RSpec.describe Hobbit do
     expect(hobbit.name).to eq('Peregrin')
   end
 
-  it 'has an unadventurous disposition' do
-    hobbit = Hobbit.new('Samwise')
-    expect(hobbit.disposition).to eq('homebody')
-  end
+  # it 'has an unadventurous disposition' do
+  #   hobbit = Hobbit.new('Samwise')
+  #   expect(hobbit.disposition).to eq('homebody')
+  # end
 
-  it 'can have a different disposition' do
-    hobbit = Hobbit.new('Frodo', 'adventurous')
-    expect(hobbit.disposition).to eq('adventurous')
-  end
+  # it 'can have a different disposition' do
+  #   hobbit = Hobbit.new('Frodo', 'adventurous')
+  #   expect(hobbit.disposition).to eq('adventurous')
+  # end
 
   it 'can grow older when celebrating birthdays' do
     hobbit = Hobbit.new('Meriadoc')
@@ -58,21 +58,36 @@ RSpec.describe Hobbit do
     expect(hobbit.adult?).to be true
   end
 
-  xit 'is old at the age of 101' do
+  it 'is old at the age of 101' do
     # create a hobbit
     # have hobbit age 101 years
     # check that hobbit.old? returns true
+    hobbit = Hobbit.new('Randy')
+
+    101.times do
+      hobbit.celebrate_birthday
+    end
+
+    expect(hobbit.old?).to be true
   end
 
-  xit 'it has the ring if its name is Frodo' do
-    # create a hobbit named Frodo
-    # create a second hobbit named Sam
-    # check that .has_ring? for Frodo returns true
-    # check that .has_ring? for Sam returns false
-  end
+  # it 'it has the ring if its name is Frodo' do
+  #   # create a hobbit named Frodo
+  #   # create a second hobbit named Sam
+  #   # check that .has_ring? for Frodo returns true
+  #   # check that .has_ring? for Sam returns false
+  #   hobbit = Hobbit.new('Frodo')
+  #   hobbit = Hobbit.new('Sam')
 
-  xit 'they are short' do
-    # create a hobbit
-    # check that is_short? returns true
-  end
-end
+
+#   #   expect(Hobbit.has_ring?('Frodo')).to be true
+#   # end
+
+#   it 'they are short' do
+#     # create a hobbit
+#     # check that is_short? returns true
+#     hobbit = Hobbit.new('Felix')
+
+#     expect(Hobbit.is_short?).to be true
+#   end
+# end

@@ -18,15 +18,15 @@ RSpec.describe Ogre do
     expect(ogre.home).to eq('Castle')
   end
 
-  # it 'can meets humans' do
-  #   ogre = Ogre.new('Brak')
-  #   human = Human.new
-  #   expect(human.name).to eq('Jane')
+  it 'can meets humans' do
+    ogre = Ogre.new('Brak')
+    human = Human.new
+    expect(human.name).to eq('Jane')
 
-  #   ogre.encounter(human)
+    ogre.encounter(human)
 
-  #   expect(human.encounter_counter).to eq(1)
-  # end
+    expect(human.encounter_counter).to eq(1)
+  end
 
   it 'is noticed by humans every third encounter' do
     ogre = Ogre.new('Brak')

@@ -37,17 +37,17 @@ RSpec.describe Werewolf do
     expect(werewolf.human?).to be true
   end
 
-  it 'when starting as a werewolf, changing a second time makes it a werewolf' do
-    werewolf = Werewolf.new('David', 'London')
+  # it 'when starting as a werewolf, changing a second time makes it a werewolf' do
+  #   werewolf = Werewolf.new('David', 'London')
 
-    werewolf.change!
-    expect(werewolf.wolf?).to be true
+  #   werewolf.change!
+  #   expect(werewolf.wolf?).to be true
 
-    werewolf.change!
-    werewolf.change!
+  #   werewolf.change!
+  #   werewolf.change!
 
-    expect(werewolf.wolf?).to be true
-  end
+  #   expect(werewolf.wolf?).to be true
+  # end
 
   it 'is not hungry by default' do
     # your code here

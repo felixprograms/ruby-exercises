@@ -17,7 +17,6 @@ class Unicorn
     end
 
     def say(stuff)
-        stuff.unshift('**;* ')
-        stuff + ' **;*'
+        '**;* ' + stuff + ' **;*'
     end
 end
